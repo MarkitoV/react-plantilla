@@ -1,0 +1,36 @@
+Commands to build the project with React:
+
+- npm init --yes  ; para crear el archivo: package.json
+
+Instalando las dependecias de desarrollo:
+
+- npm i babel-cli babel-core babel-loader babel-preset-react babel-preset-env css-loader html-webpack-plugin 
+        node-sass sass-loader nodemon style-loader webpack webpack-dev-middleware webpack-livereload-plugin -D
+
+      (babel-cli):              para interpretar el codigo de node.json
+      (babel-core):             para convertir codigo de react y javascript
+      (babel-loader):           para utilizar webpack
+      (babel-preset-react):     para decirle a babel que usaremos react
+      (babel-preset-env):       para traducir codigo de javascript 6 o versiones nuevas
+      (css-loader):             para transformar ccs
+      (html-webpack-plugin):    para utilizar documentos html
+      (nodemom):                reinicia el servidor al encontrar cambios
+      (style-loader):           permite cargar estilos
+      (webpack):                para instalar webpack mismo
+
+Instalando las dependencias de producción:
+
+- npm i express react react-dom
+
+      (express):           framework de node para escribir nuestro servidor
+      (react y react-dom): para crear la aplicación web
+
+crear los archivos "webpack.config.js" y ".babelrc" y luego configurarlos
+
+en la carpeta "src" se encontrara el codigo de nuesto servidor
+
+dentro de "src" crear la carpeta "client" que tendra todo el codigo de react
+
+crear el siguiente script dentro de "package.json" cara poder correr el servidor:
+
+- "dev": "nodemon --exec babel-node src/server.js"
